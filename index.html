@@ -1,0 +1,44 @@
+<?php
+
+define('API_KEY', 'AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg');
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Map</title>
+	<meta name="viewport" content="initial-scale=1.0">
+	<meta charset="utf-8">
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+	<link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
+<body>
+	<main>
+		<h1>Denah UNRI</h1>
+		<div id="map-group">
+			<div id="map-menu">
+				<h3>Daftar Lokasi</h3>
+				<div>
+					<a data-lat="0.475001" data-lng="101.380812">UPT Bahasa</a>
+					<a data-lat="0.477772" data-lng="101.379622">UPT TIK</a>
+					<a data-lat="0.478153" data-lng="101.380234">Gedung Arsip</a>
+					<a data-lat="0.476818" data-lng="101.379758">Perpustakaan</a>
+					<a data-lat="0.478577" data-lng="101.378587">Fakultas Pertanian</a>
+					<a data-lat="0.478491" data-lng="101.380996">Fakultas Perikanan dan Kelautan</a>
+					<a data-lat="0.477544" data-lng="101.377212">Fakultas Matematika dan Ilmu Pengetahuan</a>
+					<a data-lat="0.474385" data-lng="101.376335">Fakultas Ekonomi dan Bisnis</a>
+					<a data-lat="0.473551" data-lng="101.378677">Fakultas Ilmu Sosial dan Politik</a>
+				</div>
+			</div>
+			<div id="map-container">
+				<div id="map"></div>
+			</div>
+		</div>
+	</main>
+
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=<?= API_KEY ?>&callback=initMap&v=weekly" defer></script> -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer></script>
+<script src="./index.js"></script>
+</body>
+</html>
