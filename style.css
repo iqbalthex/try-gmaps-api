@@ -1,6 +1,5 @@
-*:not(h1){
-	margin: 0;
-	padding: 0;
+::-webkit-scrollbar {
+	display: none;
 }
 
 html, body{
@@ -8,55 +7,46 @@ html, body{
 	background: #ecc;
 }
 
-ul{
-	list-style: none;
-}
-
 main{
-	display: flex;
-	flex-direction: column;
-}
-
-main h1{
-	text-align: center;
+	display: grid;
+	grid-template-rows: 60px auto;
+	top: 0;
+	bottom: 0;
+	position: absolute;
+	padding-bottom: 1rem;
 }
 
 #map-group{
-	display: flex;
-	position: absolute;
-	top: 80px;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	border-top: 3px solid;
+	display: grid;
+	grid-template-columns: 360px 1fr;
+	height: 100%;
+	border: 2px solid;
+	border-radius: 8px
 }
 
 #map-menu{
-	width: 320px;
 	padding: 0.5rem;
-	border-right: 2px solid;
 }
 
 #map-menu h3{
-	margin-bottom: 0.5rem;
+	z-index: 99;
+	background: #e99;
+	width: calc(360px - 1rem);
+	padding: 0.25rem 0;
 }
 
-#map-menu a{
-	display: block;
-	padding: 2px 0;
+#map-menu .list-group-item{
+	background: #fbb;
+	color: #000;
 	transition: all .7s;
 }
 
 #map-menu a:hover{
-	background: #d99;
-	border-bottom: 1px solid red;
+	background: #daa;
+	color: #fff;
 	cursor: pointer;
 	letter-spacing: .5px;
-	transition: background .6s, letter-spacing .6s;
-}
-
-#map-container{
-	width: 100%;
+	transition: all .4s;
 }
 
 #map{
@@ -64,27 +54,20 @@ main h1{
 	height: 100%;
 }
 
-#marker-info{
+#place-info{
 	background: lightgreen;
-	width: 200px;
 	text-align: center;
-	padding: 0.5rem;
 }
 
-#marker-info > *:not(:last-child){
-	margin-bottom: 0.25rem;
+#place-info > *:not(:last-child){
+	margin-bottom: 0.5rem;
 }
 
-#marker-info p{
-	width: 100%;
+#place-info p{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
 
-#marker-info p span{
-	justify-self: start;
-}
-
-#marker-info p span:first-child{
-	margin-left: 1rem;
+#place-info p span{
+	text-align: left;
 }
