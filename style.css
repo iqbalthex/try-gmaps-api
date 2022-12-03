@@ -54,6 +54,10 @@ main{
 	height: 100%;
 }
 
+#map div[role=dialog]{
+	padding: 0;
+}
+
 #place-info{
 	background: lightgreen;
 	text-align: center;
@@ -70,4 +74,29 @@ main{
 
 #place-info p span{
 	text-align: left;
+}
+
+#favToggler + div{
+	height: 0;
+	width: 400px;
+}
+
+#favToggler + div > div.list-group{
+	opacity: 0;
+	overflow: hidden;
+	transition: all .6s;
+}
+
+#favToggler + div > div.list-group > a:not(:last-child){
+	margin-bottom: 0.1rem;
+}
+
+.bg-info{
+	transition: all .7s;	
+}
+
+.bg-info:hover{
+	cursor: pointer;
+	background: #0db7d7 !important;
+	transition: all .4s;
 }

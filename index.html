@@ -1,5 +1,5 @@
 <?php
-define('API_LEY', 'AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg');
+define('API_KEY', 'AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg');
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,6 +36,30 @@ define('API_LEY', 'AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg');
 			<div id="map"></div>
 		</div>
 	</main>
+
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">Tambahkan tempat</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+			<form>
+				<div class="modal-body">
+					<div class="input-group flex-nowrap">
+						<input type="text" class="form-control" placeholder="Nama tempat..." />
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
+					<button type="submit" class="btn btn-primary">Simpan</button>
+				</div>
+			</form>
+    </div>
+  </div>
+</div>
+<!-- End of Modal -->
 
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=<?= API_KEY ?>&callback=initMap&v=weekly" defer></script> -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer></script>
