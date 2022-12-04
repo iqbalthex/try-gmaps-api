@@ -88,12 +88,21 @@ window.initMap = function(){
 	favPlace.classList.add("fs-5");
 	favPlace.classList.add("mt-2");
 	favPlace.classList.add("me-2");
-	favPlace.innerHTML = `<div>
+
+	favList = datas.favPlaces;
+	let cont = `<div>
 		<button id="favToggler" class="btn bg-warning m-0" onclick="favToggle">Lokasi favorit</button>
 		<div class="position-absolute" style="right: 0">
-			<div class="list-group position-relative bg-info"></div>
-		</div>
-	</div>`;
+			<div class="list-group position-relative bg-info">
+	`;
+
+	favList.forEach(e => {
+		cont += `<a class="list-group-item bg-info px-2 py-0">${e.name}</a>`
+	});
+
+	cont += '</div></div></div>';
+
+	favPlace.innerHTML = cont;
 
 	map.controls[google.maps.ControlPosition.TOP_RIGHT].push(favPlace);
 
