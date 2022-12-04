@@ -5,13 +5,6 @@ let infoWindow, trafficLayer, map, marker;
 let favItems, favCollapsed = false;
 let favList = [];
 
-if(!localStorage.getItem("myMap")){
-	const datas = JSON.stringify({ favPlaces:[] });
-	localStorage.setItem("myMap", datas);
-}
-
-let datas = JSON.parse(localStorage.getItem("myMap"));
-
 window.initMap = function(){
 	map = new google.maps.Map(document.getElementById("map"), {
 		center: pusat, zoom: 18, mapTypeId: "terrain", disableDefaultUI: true,
@@ -36,7 +29,7 @@ window.initMap = function(){
 	marker = new google.maps.Marker({map});
 
 	places.forEach(place => {
-		place.onclick = e => {
+		place.addEventListener('click', e => {
 			const name = place.innerText;
 			let { lat, lng } = e.target.dataset;
 			lat = parseFloat(lat);
@@ -72,7 +65,7 @@ window.initMap = function(){
 
 			updateInfo({ lat: lat + 0.0002, lng }, content);
 			marker.setPosition({ lat, lng });
-		};
+		});
 	});
 
 	const favPlace = document.createElement("div");
@@ -107,8 +100,6 @@ function updateInfo(pos, content){
 
 function updateList(){
 	const items = favList.filter((v,i,a) => a.findIndex(v2 => ['name'].every(k => v2[k] === v[k])) === i);
-	datas.favPlaces = items;
-	localStorage.setItem("myMap", JSON.stringify(datas));
 
 	let content = '';
 	items.forEach(e => {
