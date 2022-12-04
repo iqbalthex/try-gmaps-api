@@ -1,0 +1,101 @@
+::-webkit-scrollbar {
+	display: none;
+}
+
+html, body{
+	height: 100%;
+	background: #ecc;
+}
+
+main{
+	display: grid;
+	grid-template-rows: 60px auto;
+	top: 0;
+	bottom: 0;
+	position: absolute;
+	padding-bottom: 1rem;
+}
+
+#map-group{
+	display: grid;
+	grid-template-columns: 360px 1fr;
+	height: 100%;
+	border: 2px solid;
+	border-radius: 8px
+}
+
+#map-menu{
+	padding: 0.5rem;
+}
+
+#map-menu h3{
+	z-index: 99;
+	background: #e99;
+	width: calc(360px - 1rem);
+	padding: 0.25rem 0;
+}
+
+#map-menu .list-group-item{
+	background: #fbb;
+	color: #000;
+	transition: all .7s;
+}
+
+#map-menu a:hover{
+	background: #daa;
+	color: #fff;
+	cursor: pointer;
+	letter-spacing: .5px;
+	transition: all .4s;
+}
+
+#map{
+	width: 100%;
+	height: 100%;
+}
+
+#map div[role=dialog]{
+	padding: 0;
+}
+
+#place-info{
+	background: lightgreen;
+	text-align: center;
+}
+
+#place-info > *:not(:last-child){
+	margin-bottom: 0.5rem;
+}
+
+#place-info p{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+#place-info p span{
+	text-align: left;
+}
+
+#favToggler + div{
+	height: 0;
+	width: 400px;
+}
+
+#favToggler + div > div.list-group{
+	overflow: hidden;
+	transition: all .6s;
+}
+
+#favToggler + div > div.list-group > a:not(:last-child){
+	margin-bottom: 0.1rem;
+}
+
+.bg-info{
+	transition: all .7s;	
+}
+
+.bg-info:hover{
+	cursor: pointer;
+	background: #0db7d7 !important;
+	transition: all .4s;
+}
