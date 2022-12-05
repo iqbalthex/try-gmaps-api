@@ -40,27 +40,3 @@ main{
 .place-info p span{
 	text-align: left;
 }
-
-.favBtn + div{
-	height: 0;
-	width: 400px;
-}
-
-.favBtn + div > div.list-group{
-	overflow: hidden;
-	transition: all .6s;
-}
-
-.favBtn + div > div.list-group > a:not(:last-child){
-	margin-bottom: 0.1rem;
-}
-
-.bg-info{
-	transition: all .7s;	
-}
-
-.bg-info:hover{
-	cursor: pointer;
-	background: #0db7d7 !important;
-	transition: all .4s;
-}
