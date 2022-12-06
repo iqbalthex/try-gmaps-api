@@ -1,0 +1,20 @@
+#searchInput{
+	font-size: 1.25rem;
+	padding: 0.5rem 1rem;
+	background: rgb(0,255,200);
+}
+
+#searchInput:placeholder-shown{
+	background: rgb(0,200,255);
+}
+
+#searchButton{
+	font-size: 1.25rem;
+	padding: 1rem;
+	background: rgb(0,255,255);
+}
+
+#searchButton:hover{
+	background: rgb(255,200,200);
+	cursor: pointer;
+}
